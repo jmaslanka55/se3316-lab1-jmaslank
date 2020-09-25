@@ -7,28 +7,44 @@ body {
 }
 
 .grid-container {
-    display: grid;
+    display: flex;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     padding: 50px;
     grid-gap: 50px;
-    justify-content: space-evenly;
+
 
 }
-.pokemon > div{
+li{
+
     border: 1px solid black;
     padding: 20px;
     font size: 70px;
     text-align: center;
-    background-color: #B8860B
+    background-color: #B8860B;
+    border-radius: 10px;
+    justify-items: center;
+
+
 }
 ul{
     list-style-type: none;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    padding: 50px;
-    grid-gap: 50px;
+    padding: 25px;
+    grid-gap: 25px;
     justify-content: space-evenly;
 }
+.description {
+    border: 1px solid dodgerblue;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    text-align: center;
+}
+li > p {
+    color: red;
+}
+
+
 
