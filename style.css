@@ -44,7 +44,7 @@ ul{
 li > p {
     color: Aqua;
 }
-input{
+input:not([type="submit"]){
     font-size: 20px;
     width: 15%;
     background-color: yellow;
