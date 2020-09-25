@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="utf-8">
     <title>SE 3316 Lab 1</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="style.css">
-    <script src = ""
+    <script src = "pokemonSearch.js"></script>
 </head>
 <body>
 <!-- Place your content here -->
 <h1>Pokedex</h1>
 <p></p>
+<form method="get" onsubmit="getInput()">
+    <input type = "text" name = "namesearch" placeholder = "Search by name">
+    <input type="submit" value="search">
+</form>
+<form method="get" onsubmit="getInput()">
+    <input type = "number" name = "numbersearch" placeholder = "Search by number">
+    <input type="submit" value="search">
+</form>
+
 <div class="grid-container">
     <ul class="pokemon">
         <li>
