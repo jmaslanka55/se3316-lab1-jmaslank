@@ -1,0 +1,16 @@
+h1 {
+    text-align: center
+}
+
+body {
+    background-color: powderblue;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto
+    background-color: red
+    padding: 10px;
+}
+.grid-item {
+}
