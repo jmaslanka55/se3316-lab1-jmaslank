@@ -19,7 +19,6 @@ li{
 
     border: 1px solid black;
     padding: 20px;
-    font size: 70px;
     text-align: center;
     background-color: #B8860B;
     border-radius: 10px;
@@ -43,7 +42,7 @@ ul{
     text-align: center;
 }
 li > p {
-    color: red;
+    color: Aqua;
 }
 
 
