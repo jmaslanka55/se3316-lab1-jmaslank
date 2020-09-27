@@ -12,12 +12,13 @@
 <!-- Place your content here -->
 <h1>Pokedex</h1>
 <p></p>
-<form method="get" onsubmit="getInput()">
-    <input type = "text" name = "namesearch" placeholder = "Search by name">
+<form method="get" onsubmit="get_pokemon_name()">
+    <input type = "text" name = "name_search" placeholder = "Search by name" id ="poke_name">
     <input type="submit" value="search">
 </form>
-<form method="get" onsubmit="getInput()">
-    <input type = "number" name = "numbersearch" placeholder = "Search by number">
+
+<form method="get" onsubmit="get_pokemon_num()">
+    <input type = "number" name = "number_search" placeholder = "Search by number" id ="poke_num">
     <input type="submit" value="search">
 </form>
 
@@ -219,7 +220,7 @@
             <p id="number">#019</p>
             <div class="description">
                 Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the
-                area
+                area.
             </div>
         </li>
 
