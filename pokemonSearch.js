@@ -24,8 +24,9 @@ let pokeArray = [
 
 function get_pokemon_name() {
     let form_check = /^[A-Za-z]+$/
+    let input_length = document.getElementById('poke_name').value.length;
     let poke_name = document.getElementById('poke_name').value;
-    if (form_check.test(poke_name))
+    if (form_check.test(poke_name) && input_length <=20)
     {
         poke_name_search(poke_name);
     }
