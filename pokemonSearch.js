@@ -23,12 +23,12 @@ let pokeArray = [
 ];
 
 function get_pokemon_name() {
-    //let form_check = /^{A-Za-z]+$/
+    let form_check = /^[A-Za-z]+$/
     let poke_name = document.getElementById('poke_name').value;
-    //if (poke_name.value.match(form_check))
-    //{
+    if (form_check.test(poke_name))
+    {
         poke_name_search(poke_name);
-    //}
+    }
 }
 
 function get_pokemon_num() {
