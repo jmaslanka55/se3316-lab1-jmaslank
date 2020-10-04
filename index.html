@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <script src = "pokemonSearch.js"></script>
 </head>
-<body>
+<body onload="divCreate()">
 <!-- Place your content here -->
 <h1>Pokedex</h1>
 <p></p>
+
 <form method="get" onkeyup="get_pokemon_name()">
     <input type = "text" name = "name_search" placeholder = "Search by name" id ="poke_name">
     <input type="submit" value="search">
@@ -21,7 +22,8 @@
     <input type = "number" name = "number_search" placeholder = "Search by number" id ="poke_num">
     <input type="submit" value="search">
 </form>
-
+<div id="createDiv">
+</div>
 <div class="grid-container" id ="grid1">
     <ul id="pokemon">
         <li>
