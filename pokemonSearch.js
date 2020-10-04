@@ -40,27 +40,20 @@ function get_pokemon_num() {
 }
 
 function poke_name_search(poke_name) {
+    document.createElement("div");
+    let searched_pokemon = [];
     let user_input = poke_name.toLowerCase();
-    let alert_message = "";
-    let count = 0;
     for (let i = 0; i < pokeArray.length; i++) {
-        if (pokeArray[i][1].toLowerCase().includes(user_input) && count< 5) {
-            alert_message += "# " + pokeArray[i][0] + " " + pokeArray[i][1] + " " + pokeArray[i][2] + "\n";
-            count++;
+        if (pokeArray[i][1].toLowerCase().includes(user_input)) {
+            searched_pokemon.push([pokeArray[i][0],pokeArray[i][1],pokeArray[i][2]]);
         }
     }
-    alert(alert_message);
-
-}
-
-function poke_num_search(poke_num) {
-    let user_input = poke_num.toLowerCase();
-    let alert_message = "";
-    for (let i = 0; i < pokeArray.length; i++) {
-        if (parseInt(pokeArray[i][0]) == user_input) {
-            alert_message += "# " + pokeArray[i][0] + " " + pokeArray[i][1] + " " + pokeArray[i][2] + "\n";
-        }
+    for (let j = 0; j<searched_pokemon.length;i++){
+        let listElement = document.getElementById();
+        let textNode = document.createTextNode(searched_pokemon[j][1]);
+        listElement[j].appendChild(textNode);
     }
-    alert(alert_message);
 }
+
+
 
