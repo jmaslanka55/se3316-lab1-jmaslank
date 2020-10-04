@@ -1,4 +1,4 @@
-function divCreate(){
+function divCreate() {
     let createDiv = document.getElementById("createDiv");
     let secondDiv = document.createElement("div");
     secondDiv.id = "newDiv";
@@ -11,7 +11,24 @@ function get_pokemon_name() {
     let input_length = document.getElementById('poke_name').value.length;
     let poke_name = document.getElementById('poke_name').value;
     if (form_check.test(poke_name) && input_length <= 20) {
-        poke_name_search(poke_name);
+        let ul = document.getElementById("pokemon");
+        let li = ul.getElementsByTagName("li");
+        let user_input = poke_name.toLowerCase();
+        let newDiv = document.getElementById('newDiv');
+
+        while (newDiv.firstChild) {
+            newDiv.removeChild(newDiv.lastChild);
+        }
+        for (let i = 0; li.length; i++) {
+            let a = li[i].getElementsByClassName("name")[0];
+            let textValue = a.textContent || a.innerText;
+            if (textValue.toLowerCase().indexOf(user_input) > -1) {
+                let listItem = document.createElement("ul");
+                listItem = li[i].cloneNode(true);
+                listItem.id = "searchList";
+                newDiv.appendChild(listItem);
+            }
+        }
     }
 }
 
@@ -22,32 +39,23 @@ function get_pokemon_num() {
     }
 }
 
-function poke_name_search(poke_name) {
+
+function poke_num_search(poke_num) {
+    let user_input = poke_num.toLowerCase();
     let ul = document.getElementById("pokemon");
     let li = ul.getElementsByTagName("li");
-    let user_input = poke_name.toLowerCase();
-    let newDiv = document.getElementById('newDiv');
-
+    let newDiv = document.getElementById("newDiv");
+    while (newDiv.firstChild) {
+        newDiv.removeChild(newDiv.lastChild);
+    }
     for (let i = 0; li.length; i++) {
-        let a = li[i].getElementsByClassName("name")[0];
+        let a = li[i].getElementsByClassName("number")[0];
         let textValue = a.textContent || a.innerText;
         if (textValue.toLowerCase().indexOf(user_input) > -1) {
             let listItem = document.createElement("ul");
             listItem = li[i].cloneNode(true);
             listItem.id = "searchList";
-;            newDiv.appendChild(listItem);
-        } else {
-            //li[i].style.display = "none"
+            newDiv.appendChild(listItem);
         }
     }
 }
-
-//function poke_num_search(poke_num) {
-//let user_input = poke_num.toLowerCase();
-// for (let i = 0; i < pokeArray.length; i++) {
-// if (parseInt(pokeArray[i][0]) == user_input) {
-//  alert_message += "# " + pokeArray[i][0] + " " + pokeArray[i][1] + " " + pokeArray[i][2] + "\n";
-// }
-// }
-//}
-
