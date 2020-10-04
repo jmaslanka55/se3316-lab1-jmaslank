@@ -52,7 +52,7 @@ input:not([type="submit"]){
     border: 2px solid #ccc;
     margin-left: 60px;
 }
-#searchList{
+#list{
     background-color: blue;
     list-style-type: none;
 }
