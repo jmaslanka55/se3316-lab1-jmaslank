@@ -1,26 +1,3 @@
-let pokeArray = [
-    ["001", "Bulbasaur", "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger."],
-    ["002", "Ivysaur", "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."],
-    ["003", "Venusaur", "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight."],
-    ["004", "Charmander", "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail."],
-    ["005", "Charmeleon", "It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws."],
-    ["006", "Charizard", "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames."],
-    ["007", "Squirtle", "When it retracts its long neck into its shell, it squirts out water with vigorous force."],
-    ["008", "Wartortle", "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old."],
-    ["009", "Blastoise", "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell."],
-    ["010", "Caterpie", "For protection, it releases a horrible stench from the antenna on its head to drive away enemies"],
-    ["011", "Metapod", "It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack."],
-    ["012", "Butterfree", "In battle, it flaps its wings at great speed to release highly toxic dust into the air."],
-    ["013", "Weedle", "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves."],
-    ["014", "Kakuna", "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy."],
-    ["015", "Beedrill", "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly."],
-    ["016", "Pidgey", "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back."],
-    ["017", "Pidgeotto", "This Pokémon is full of vitality. It constantly flies around its large territory in search of prey."],
-    ["018", "Pidgeot", "This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons."],
-    ["019", "Rattata", "Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area."],
-    ["020", "Raticate", " Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey."]
-
-];
 
 function get_pokemon_name() {
     let form_check = /^[A-Za-z]+$/
@@ -42,16 +19,16 @@ function poke_name_search(poke_name) {
     let ul = document.getElementById("pokemon");
     let li = ul.getElementsByTagName("li");
     let user_input = poke_name.toLowerCase();
-    let newDiv = document.createElement('div');
+
     for (let i = 0; li.length; i++) {
         let a = li[i].getElementsByClassName("name")[0];
         let textValue = a.textContent || a.innerText;
         if (textValue.toLowerCase().indexOf(user_input) > -1) {
-            let listItem = document.createElement('li');
+            let listItem = document.createElement("li");
             listItem = li[i].cloneNode(true);
-            newDiv.appendChild(listItem);
+            document.getElementById("newDiv").appendChild(listItem);
         } else {
-            li[i].style.display = "none"
+            //li[i].style.display = "none"
         }
     }
 }
